@@ -1,4 +1,3 @@
-<?php
 <html>
 <head>
 	<meta charset="utf-8">
@@ -11,7 +10,7 @@
 		<div>
 			<img src="https://raw.githubusercontent.com/FL4MING/Proektirovanie_1/main/Formula.jpg" width="500px" height="80px">
 		</div>
-		<form name="form" method="post" action="$count">
+		<form name="form" method="post">
 			n
 			<input type="text" name="n_input" value="0" size="5">
 			x
@@ -20,7 +19,10 @@
 		</form>
 	</div>
 	<?php
-		$count = function ()
+	if (isset($_POST['count'])) {
+		counts();
+	}
+		function counts()
 		{
 			$n = $_POST['n_input'];
 			$x = $_POST['x_input'];
@@ -39,4 +41,3 @@
 	?>
 </body>
 </html>
-?>
